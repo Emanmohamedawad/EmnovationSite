@@ -12,10 +12,6 @@ const defaultMeta = {
   url: 'https://themewagon.com/themes/LaslesVPN-nextjs',
   type: 'website',
   robots: 'follow, index',
-  // change with url of your image (recommended dimension = 1.91:1)
-  // used in twitter, facebook, etc. card when link copied in tweet/status 
-  image: 'https://themewagon.com/themes/LaslesVPN-nextjs/assets/card-image.png',
-  author: 'Lorem Ipsum'
 };
 
 /**

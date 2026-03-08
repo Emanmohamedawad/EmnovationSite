@@ -1,5 +1,5 @@
 import Feature from "../components/WeOffer";
-import Pricing from "../components/Pricing";
+import Courses from "../components/Courses";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout/Layout";
 import SeoHead from "../components/SeoHead";
@@ -11,7 +11,7 @@ export default function Home() {
       <Layout>
         <Hero />
         <Feature />
-        {/* <Pricing /> */}
+        <Courses />
       </Layout>
     </>
   );
