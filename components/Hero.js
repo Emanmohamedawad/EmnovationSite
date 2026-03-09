@@ -37,7 +37,7 @@ const Hero = ({
       variants={scrollAnimation}
     >
       {/* Left Text */}
-      <div className="flex flex-col justify-center items-start  sm:text-left">
+      <div className="flex flex-col justify-center">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-snug">
           {t("heroTitle")}
         </h1>
@@ -76,7 +76,7 @@ const Hero = ({
           custom={{ duration: 2 + index }}
           variants={scrollAnimation}
         >
-          <div className="flex items-center justify-center bg-orange-100 w-12 h-12 rounded-full mb-2 sm:mb-0 sm:mr-4">
+          <div className="flex items-center justify-center bg-orange-100 w-12 h-12 rounded-full mb-2 sm:mb-0 mx-2">
             <img src={listUsers.icon} className="h-6 w-6" />
           </div>
           <div className="flex flex-col items-center sm:items-start">
