@@ -21,12 +21,18 @@ const Feature = () => {
 
   return (
     <div
-      className="max-w-screen-xl mt-8 mb-6 py-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      className="max-w-screen-xl  mb-6 py-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
       id="we-offer"
     >
-      <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 p  y-8 my-12">
-        <ScrollAnimationWrapper className="flex w-full justify-end">
-          <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 gap-8 py-8 ${locale === "ar" ? "text-right" : "text-left"}`}
+      >
+        {/* image column; flip order on arabic */}
+        <ScrollAnimationWrapper
+          className={`flex w-full justify-end ${locale === "ar" ? "sm:order-2" : "sm:order-1"}`}
+        >
+          <motion.div className="w-full p-4">
             <Image
               src="/assets/Illustration2.png"
               alt="VPN Illustrasi"
@@ -37,41 +43,44 @@ const Feature = () => {
             />
           </motion.div>
         </ScrollAnimationWrapper>
-        <ScrollAnimationWrapper>
+        <ScrollAnimationWrapper
+          className={locale === "ar" ? "sm:order-1" : "sm:order-2"}
+        >
           <motion.div
-            className={
-              "flex flex-col mt-12 justify-center ml-auto w-full lg:w-9/12 " +
-              (locale === "ar" ? "items-start" : "items-end")
-            }
+            className={`flex flex-col justify-center w-full lg:w-9/12 mt-4 sm:mt-0 ${
+              locale === "ar" ? "items-start" : "items-end"
+            }`}
             variants={scrollAnimation}
           >
             <h3 className="text-3xl lg:text-4xl font-medium leading-relaxed text-black-600">
               {t("weOfferTitle")}
             </h3>
             <p className="my-2 text-black-500">{t("weOfferDescription")}</p>
-            <ul
-              className={
-                "text-black-500 self-start list-inside " +
-                (locale === "ar" ? "mr-8" : "ml-8")
-              }
-            >
-              {features.map((feature, index) => (
-                <motion.li
-                  className="relative circle-check custom-list my-2"
-                  custom={{ duration: 2 + index }}
-                  variants={scrollAnimation}
-                  key={feature}
-                  whileHover={{
-                    scale: 1.1,
-                    transition: {
-                      duration: 0.2,
-                    },
-                  }}
-                >
-                  {t(feature)}
-                </motion.li>
-              ))}
-            </ul>
+<ul className={`text-black-500 self-start list-none space-y-2`}>
+  {features.map((feature, index) => (
+    <motion.li
+      key={feature}
+      custom={{ duration: 2 + index }}
+      variants={scrollAnimation}
+      whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+      className="flex items-center"
+    >
+      {/* أيقونة */}
+      <span
+        className={`w-5 h-5 flex-shrink-0 mr-2 ${
+          locale === "ar" ? "order-2 ml-2 mr-0" : "order-1"
+        }`}
+      >
+        ✅
+      </span>
+
+      {/* النص */}
+      <span className={`flex-1 ${locale === "ar" ? "order-1 text-right" : "order-2 text-left"}`}>
+        {t(feature)}
+      </span>
+    </motion.li>
+  ))}
+</ul>
           </motion.div>
         </ScrollAnimationWrapper>
       </div>

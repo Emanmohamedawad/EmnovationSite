@@ -5,9 +5,30 @@
 
 html {
   font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+
+  /* custom scrollbar */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ccc #f53838cf; /* Firefox: thumb color, track color */
 }
 body {
   @apply bg-white-500;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f53838cf; /* Tailwind orange-500 */
+    border-radius: 9999px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Tailwind gray-800 / أي لون تحبيه */
+    border-radius: 9999px;
+    border: 2px solid #f53838cf; /* optional padding effect */
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc; /* darken on hover */
+  }
 }
 p {
   @apply text-black-500;

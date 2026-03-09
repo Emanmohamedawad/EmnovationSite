@@ -12,7 +12,7 @@ const Footer = () => {
     });
   }, []);
   return (
-    <footer className="bg-gray-50 py-12 mt-24 border-t border-orange-500">
+    <footer className="bg-gray-50 py-16 mt-24 border-t border-orange-500">
       <div className="max-w-screen-md mx-auto px-6 flex flex-col items-center text-center space-y-6">
         {/* Logo */}
         <h2>
@@ -26,49 +26,49 @@ const Footer = () => {
         </p>
 
         {/* Navigation */}
-        <div className="flex gap-8 text-gray-600">
-          <LinkScroll
-            to="about"
-            smooth
-            duration={800}
-            className={
-              "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-              (activeLink === "about"
-                ? " text-orange-500 animation-active "
-                : " text-black-500 hover:text-orange-500 a")
-            }
-          >
-            {t("about")}
-          </LinkScroll>
+<div className="hidden md:flex gap-8 text-gray-600">
+  <LinkScroll
+    to="about"
+    smooth
+    duration={800}
+    className={
+      "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+      (activeLink === "about"
+        ? " text-orange-500 animation-active "
+        : " text-black-500 hover:text-orange-500 a")
+    }
+  >
+    {t("about")}
+  </LinkScroll>
 
-          <LinkScroll
-            to="we-offer"
-            smooth
-            duration={800}
-            className={
-              "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-              (activeLink === "we-offer"
-                ? " text-orange-500 animation-active "
-                : " text-black-500 hover:text-orange-500 ")
-            }
-          >
-            {t("whatWeOffer")}
-          </LinkScroll>
+  <LinkScroll
+    to="we-offer"
+    smooth
+    duration={800}
+    className={
+      "px-1 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+      (activeLink === "we-offer"
+        ? " text-orange-500 animation-active "
+        : " text-black-500 hover:text-orange-500 ")
+    }
+  >
+    {t("whatWeOffer")}
+  </LinkScroll>
 
-          <LinkScroll
-            to="pricing"
-            smooth
-            duration={800}
-            className={
-              "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-              (activeLink === "pricing"
-                ? " text-orange-500 animation-active "
-                : " text-black-500 hover:text-orange-500 ")
-            }
-          >
-            {t("courses")}
-          </LinkScroll>
-        </div>
+  <LinkScroll
+    to="pricing"
+    smooth
+    duration={800}
+    className={
+      "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+      (activeLink === "pricing"
+        ? " text-orange-500 animation-active "
+        : " text-black-500 hover:text-orange-500 ")
+    }
+  >
+    {t("courses")}
+  </LinkScroll>
+</div>
 
         {/* Social */}
         <div className="flex gap-4 mt-2">
