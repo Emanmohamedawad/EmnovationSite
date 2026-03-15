@@ -25,7 +25,7 @@ const Courses = () => {
       titleKey: "courseHtml",
       image: Html,
       sessions: 6,
-      pricePerSession: 20,
+      pricePerSession: 10,
       currency: "SAR",
       topicsKeys: [
         "htmlTopic1",
@@ -44,7 +44,7 @@ const Courses = () => {
       titleKey: "courseCss",
       image: Css,
       sessions: 7,
-      pricePerSession: 20,
+      pricePerSession: 10,
       currency: "SAR",
       topicsKeys: [
         "cssTopic1",
@@ -63,7 +63,7 @@ const Courses = () => {
       titleKey: "courseJavascript",
       image: Js,
       sessions: 8,
-      pricePerSession: 30,
+      pricePerSession: 15,
       currency: "SAR",
       topicsKeys: [
         "jsTopic1",
@@ -83,7 +83,7 @@ const Courses = () => {
       titleKey: "courseReact",
       image: ReactImg,
       sessions: 8,
-      pricePerSession: 30,
+      pricePerSession: 15,
       currency: "SAR",
       topicsKeys: [
         "reactTopic1",
@@ -103,7 +103,7 @@ const Courses = () => {
       titleKey: "courseBootstrapTailwind",
       image: BootstrapTailwind,
       sessions: 5,
-      pricePerSession: 20,
+      pricePerSession: 10,
       currency: "SAR",
       topicsKeys: [
         "bootstrapTailwindTopic1",
@@ -124,7 +124,7 @@ const Courses = () => {
       titleKey: "courseUiUx",
       image: UiUx,
       sessions: 6,
-      pricePerSession: 25,
+      pricePerSession: 10,
       currency: "SAR",
       topicsKeys: [
         "uiuxTopic1",
@@ -143,7 +143,7 @@ const Courses = () => {
       titleKey: "courseGraphic",
       image: Graphic,
       sessions: 6,
-      pricePerSession: 20,
+      pricePerSession: 10,
       currency: "SAR",
       topicsKeys: [
         "graphicTopic1",
@@ -162,7 +162,7 @@ const Courses = () => {
       titleKey: "courseSql",
       image: Sql,
       sessions: 5,
-      pricePerSession: 25,
+      pricePerSession: 10,
       currency: "SAR",
       topicsKeys: [
         "sqlTopic1",
