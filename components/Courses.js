@@ -25,62 +25,62 @@ const Courses = () => {
   const { t } = useLanguage();
 
   const courses = [
-        {
-  id: 1,
-  titleKey: "Fundamentals Programming",
-  image: ProgrammingFundamentals,
-  sessions: 8,
-  pricePerSession: 12,
-  currency: "SAR",
-  topicsKeys: [
-    "pfTopic1",
-    "pfTopic2",
-    "pfTopic3",
-    "pfTopic4",
-    "pfTopic5",
-    "pfTopic6",
-    "pfTopic7",
-    "pfTopic8",
-  ],
+    {
+      id: 1,
+      titleKey: "Fundamentals Programming",
+      image: ProgrammingFundamentals,
+      sessions: 8,
+      pricePerSession: 12,
+      currency: "SAR",
+      topicsKeys: [
+        "pfTopic1",
+        "pfTopic2",
+        "pfTopic3",
+        "pfTopic4",
+        "pfTopic5",
+        "pfTopic6",
+        "pfTopic7",
+        "pfTopic8",
+      ],
     },
 
-{
-  id: 2,
-  titleKey: "Data Stuctures",
-  image: DataStructures,
-  sessions: 8,
-  pricePerSession: 15,
-  currency: "SAR",
-  topicsKeys: [
-    "dsTopic1",
-    "dsTopic2",
-    "dsTopic3",
-    "dsTopic4",
-    "dsTopic5",
-    "dsTopic6",
-    "dsTopic7",
-    "dsTopic8",
-  ],
-},
+    {
+      id: 2,
+      titleKey: "Data Stuctures",
+      image: DataStructures,
+      sessions: 8,
+      pricePerSession: 15,
+      currency: "SAR",
+      topicsKeys: [
+        "dsTopic1",
+        "dsTopic2",
+        "dsTopic3",
+        "dsTopic4",
+        "dsTopic5",
+        "dsTopic6",
+        "dsTopic7",
+        "dsTopic8",
+      ],
+    },
 
-{
-  id: 3,
-  titleKey: "Software Engineering",
-  image: SoftwareEngineering,
-  sessions: 7,
-  pricePerSession: 15,
-  currency: "SAR",
-  topicsKeys: [
-    "seTopic1",
-    "seTopic2",
-    "seTopic3",
-    "seTopic4",
-    "seTopic5",
-    "seTopic6",
-    "seTopic7",
-    "seTopic8",
-  ],
-},
+    {
+      id: 3,
+      titleKey: "Software Engineering",
+      image: SoftwareEngineering,
+      sessions: 7,
+      pricePerSession: 15,
+      currency: "SAR",
+      topicsKeys: [
+        "seTopic1",
+        "seTopic2",
+        "seTopic3",
+        "seTopic4",
+        "seTopic5",
+        "seTopic6",
+        "seTopic7",
+        "seTopic8",
+      ],
+    },
     {
       id: 4,
       titleKey: "courseHtml",
@@ -237,43 +237,43 @@ const Courses = () => {
       ],
     },
 
-{
-  id: 12,
-  titleKey: "Data Analysis",
-  image: DataAnalysis,
-  sessions: 7,
-  pricePerSession: 15,
-  currency: "SAR",
-  topicsKeys: [
-    "daTopic1",
-    "daTopic2",
-    "daTopic3",
-    "daTopic4",
-    "daTopic5",
-    "daTopic6",
-    "daTopic7",
-    "daTopic8",
-  ],
-},
+    {
+      id: 12,
+      titleKey: "Data Analysis",
+      image: DataAnalysis,
+      sessions: 7,
+      pricePerSession: 15,
+      currency: "SAR",
+      topicsKeys: [
+        "daTopic1",
+        "daTopic2",
+        "daTopic3",
+        "daTopic4",
+        "daTopic5",
+        "daTopic6",
+        "daTopic7",
+        "daTopic8",
+      ],
+    },
 
-{
-  id: 13,
-  titleKey: "Cyber Security",
-  image: CyberSecurity,
-  sessions: 7,
-  pricePerSession: 15,
-  currency: "SAR",
-  topicsKeys: [
-    "csTopic1",
-    "csTopic2",
-    "csTopic3",
-    "csTopic4",
-    "csTopic5",
-    "csTopic6",
-    "csTopic7",
-    "csTopic8",
-  ],
-},
+    {
+      id: 13,
+      titleKey: "Cyber Security",
+      image: CyberSecurity,
+      sessions: 7,
+      pricePerSession: 15,
+      currency: "SAR",
+      topicsKeys: [
+        "csTopic1",
+        "csTopic2",
+        "csTopic3",
+        "csTopic4",
+        "csTopic5",
+        "csTopic6",
+        "csTopic7",
+        "csTopic8",
+      ],
+    },
   ];
 
   return (
@@ -406,24 +406,24 @@ const Courses = () => {
 
       {/* section privte session */}
       <div className="py-6 bg-orange-500 text-white-500 text-center container mt-10 ">
-  <span className="text-lg font-semibold block">
-    {t("privateSessionTitle")}
-  </span>
+        <span className="text-lg font-semibold block">
+          {t("privateSessionTitle")}
+        </span>
 
-  <span className="mt-2 text-sm text-center block">
-    {t("privateSessionDesc")}
-  </span>
-      <a               href={`https://wa.me/201153035834?text=${encodeURIComponent(
-                `${t("whatsappMessagePrefix")}`,
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer">
-            <button className="my-6 font-semibold bg-transparnt border-white-500 border rounded-[10px] text-white-500 hover:text-orange-500 hover:bg-white-500 px-6 py-1">
-      {t("contactWhatsapp")}
-    </button>
-      </a>
-
-
+        <span className="mt-2 text-sm text-center block">
+          {t("privateSessionDesc")}
+        </span>
+        <a
+          href={`https://wa.me/201153035834?text=${encodeURIComponent(
+            `Hello Emnovation`,
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="my-6 font-semibold bg-transparnt border-white-500 border rounded-[10px] text-white-500 hover:text-orange-500 hover:bg-white-500 px-6 py-1">
+            {t("contactWhatsapp")}
+          </button>
+        </a>
       </div>
     </div>
   );
