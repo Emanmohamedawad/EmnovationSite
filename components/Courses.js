@@ -13,6 +13,11 @@ import UiUx from "../public/assets/courses/uiux.jpg";
 import Graphic from "../public/assets/courses/graphic.jpg";
 import Sql from "../public/assets/courses/sql.jpg";
 import Node from "../public/assets/courses/node.jpg";
+import ProgrammingFundamentals from "../public/assets/courses/programing.jpg";
+import DataStructures from "../public/assets/courses/database.jpg";
+import SoftwareEngineering from "../public/assets/courses/software.jpg";
+import DataAnalysis from "../public/assets/courses/data.jpg";
+import CyberSecurity from "../public/assets/courses/cyber.jpg";
 
 const Courses = () => {
   // const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -20,8 +25,64 @@ const Courses = () => {
   const { t } = useLanguage();
 
   const courses = [
+        {
+  id: 1,
+  titleKey: "Fundamentals Programming",
+  image: ProgrammingFundamentals,
+  sessions: 8,
+  pricePerSession: 12,
+  currency: "SAR",
+  topicsKeys: [
+    "pfTopic1",
+    "pfTopic2",
+    "pfTopic3",
+    "pfTopic4",
+    "pfTopic5",
+    "pfTopic6",
+    "pfTopic7",
+    "pfTopic8",
+  ],
+    },
+
+{
+  id: 2,
+  titleKey: "Data Stuctures",
+  image: DataStructures,
+  sessions: 8,
+  pricePerSession: 15,
+  currency: "SAR",
+  topicsKeys: [
+    "dsTopic1",
+    "dsTopic2",
+    "dsTopic3",
+    "dsTopic4",
+    "dsTopic5",
+    "dsTopic6",
+    "dsTopic7",
+    "dsTopic8",
+  ],
+},
+
+{
+  id: 3,
+  titleKey: "Software Engineering",
+  image: SoftwareEngineering,
+  sessions: 7,
+  pricePerSession: 15,
+  currency: "SAR",
+  topicsKeys: [
+    "seTopic1",
+    "seTopic2",
+    "seTopic3",
+    "seTopic4",
+    "seTopic5",
+    "seTopic6",
+    "seTopic7",
+    "seTopic8",
+  ],
+},
     {
-      id: 1,
+      id: 4,
       titleKey: "courseHtml",
       image: Html,
       sessions: 6,
@@ -40,7 +101,7 @@ const Courses = () => {
     },
 
     {
-      id: 2,
+      id: 5,
       titleKey: "courseCss",
       image: Css,
       sessions: 7,
@@ -59,7 +120,7 @@ const Courses = () => {
     },
 
     {
-      id: 3,
+      id: 6,
       titleKey: "courseJavascript",
       image: Js,
       sessions: 8,
@@ -79,7 +140,7 @@ const Courses = () => {
     },
 
     {
-      id: 4,
+      id: 7,
       titleKey: "courseReact",
       image: ReactImg,
       sessions: 8,
@@ -99,7 +160,7 @@ const Courses = () => {
     },
 
     {
-      id: 5,
+      id: 8,
       titleKey: "courseBootstrapTailwind",
       image: BootstrapTailwind,
       sessions: 5,
@@ -120,7 +181,7 @@ const Courses = () => {
     },
 
     {
-      id: 6,
+      id: 9,
       titleKey: "courseUiUx",
       image: UiUx,
       sessions: 6,
@@ -139,7 +200,7 @@ const Courses = () => {
     },
 
     {
-      id: 7,
+      id: 10,
       titleKey: "courseGraphic",
       image: Graphic,
       sessions: 6,
@@ -158,7 +219,7 @@ const Courses = () => {
     },
 
     {
-      id: 8,
+      id: 11,
       titleKey: "courseSql",
       image: Sql,
       sessions: 5,
@@ -176,29 +237,48 @@ const Courses = () => {
       ],
     },
 
-    // {
-    //   id: 9,
-    //   titleKey: "courseNode",
-    //   image: Node,
-    //   sessions: 7,
-    //   pricePerSession: 35,
-    //   currency: "SAR",
-    //   topicsKeys: [
-    //     "nodeTopic1",
-    //     "nodeTopic2",
-    //     "nodeTopic3",
-    //     "nodeTopic4",
-    //     "nodeTopic5",
-    //     "nodeTopic6",
-    //     "nodeTopic7",
-    //     "nodeTopic8",
-    //   ],
-    // },
+{
+  id: 12,
+  titleKey: "Data Analysis",
+  image: DataAnalysis,
+  sessions: 7,
+  pricePerSession: 15,
+  currency: "SAR",
+  topicsKeys: [
+    "daTopic1",
+    "daTopic2",
+    "daTopic3",
+    "daTopic4",
+    "daTopic5",
+    "daTopic6",
+    "daTopic7",
+    "daTopic8",
+  ],
+},
+
+{
+  id: 13,
+  titleKey: "Cyber Security",
+  image: CyberSecurity,
+  sessions: 7,
+  pricePerSession: 15,
+  currency: "SAR",
+  topicsKeys: [
+    "csTopic1",
+    "csTopic2",
+    "csTopic3",
+    "csTopic4",
+    "csTopic5",
+    "csTopic6",
+    "csTopic7",
+    "csTopic8",
+  ],
+},
   ];
 
   return (
     <div
-      className="bg-gradient-to-b from-white-300 to-white-500 w-full py-16"
+      className="bg-gradient-to-b from-white-300 to-white-500 w-full pt-16"
       id="Courses"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -323,6 +403,28 @@ const Courses = () => {
           </div>
         </div>
       )}
+
+      {/* section privte session */}
+      <div className="py-6 bg-orange-500 text-white-500 text-center container mt-10 ">
+  <span className="text-lg font-semibold block">
+    {t("privateSessionTitle")}
+  </span>
+
+  <span className="mt-2 text-sm text-center block">
+    {t("privateSessionDesc")}
+  </span>
+      <a               href={`https://wa.me/201153035834?text=${encodeURIComponent(
+                `${t("whatsappMessagePrefix")}`,
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer">
+            <button className="my-6 font-semibold bg-transparnt border-white-500 border rounded-[10px] text-white-500 hover:text-orange-500 hover:bg-white-500 px-6 py-1">
+      {t("contactWhatsapp")}
+    </button>
+      </a>
+
+
+      </div>
     </div>
   );
 };

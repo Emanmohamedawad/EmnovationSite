@@ -39,7 +39,7 @@ const translations = {
     contactWhatsapp: "Contact to Book on WhatsApp",
     whatsappMessagePrefix: "Hello EMnovation, I am interested in the course on",
     firstSessionFreeNote:
-      "🎓 First session is FREE and includes an introduction to the course and learning plan.",
+    "🎓 First session is FREE and includes an introduction to the course and learning plan. ✅ A free certificate is provided at the end of each course.",
     // course names
     courseHtml: "HTML",
     courseCss: "CSS",
@@ -127,6 +127,55 @@ const translations = {
     nodeTopic6: "Authentication (JWT)",
     nodeTopic7: "Database Connection",
     nodeTopic8: "Backend Project",
+
+    pfTopic1: "Introduction to Programming & Logical Thinking",
+    pfTopic2: "Variables and Data Types",
+    pfTopic3: "Conditional Statements (if / else)",
+    pfTopic4: "Loops (for / while)",
+    pfTopic5: "Functions and Code Reusability",
+    pfTopic6: "Arrays and Lists",
+    pfTopic7: "Problem Solving and Algorithms Basics",
+    pfTopic8: "Mini Programming Project",
+
+    dsTopic1: "Introduction to Data Structures",
+    dsTopic2: "Arrays and Complexity Basics",
+    dsTopic3: "Stacks and Queues",
+    dsTopic4: "Linked Lists",
+    dsTopic5: "Trees and Binary Trees",
+    dsTopic6: "Hash Tables",
+    dsTopic7: "Searching and Sorting Algorithms",
+    dsTopic8: "Problem Solving with Data Structures",
+
+    seTopic1: "Introduction to Software Engineering",
+    seTopic2: "Software Development Life Cycle (SDLC)",
+    seTopic3: "Agile and Scrum Methodologies",
+    seTopic4: "Requirement Analysis",
+    seTopic5: "System Design Basics",
+    seTopic6: "Version Control using Git",
+    seTopic7: "Team Collaboration and Project Management",
+    seTopic8: "Building a Real Software Project",
+
+    daTopic1: "Introduction to Data Analysis",
+    daTopic2: "Data Types and Data Collection",
+    daTopic3: "Data Cleaning and Preparation",
+    daTopic4: "Data Visualization Basics",
+    daTopic5: "Using Excel / Python for Analysis",
+    daTopic6: "Exploratory Data Analysis",
+    daTopic7: "Interpreting Data and Making Decisions",
+    daTopic8: "Data Analysis Mini Project",
+
+    csTopic1: "Introduction to Cyber Security",
+    csTopic2: "Types of Cyber Attacks",
+    csTopic3: "Network Security Basics",
+    csTopic4: "Encryption and Data Protection",
+    csTopic5: "Ethical Hacking Fundamentals",
+    csTopic6: "Web Security Basics",
+    csTopic7: "Security Tools and Best Practices",
+    csTopic8: "Cyber Security Case Study",
+
+
+    privateSessionTitle: "Private Sessions Available",
+    privateSessionDesc: "Students can book special sessions for any topic outside the listed courses, including help with university projects, programming challenges, or specific technology topics."
   },
   ar: {
     about: "من نحن",
@@ -165,15 +214,15 @@ const translations = {
     contactWhatsapp: "تواصل للحجز عبر واتساب",
     whatsappMessagePrefix: "مرحباً إم نوفايشن، أنا مهتم بالدورة التالية",
     firstSessionFreeNote:
-      "🎓 الجلسة الأولى مجانية وتشمل مقدمة عن الدورة وخطة التعلم.",
+      "🎓 الجلسة الأولى مجانية وتشمل مقدمة عن الكورس وخطة التعلم. ✅ يتم تقديم شهادة مجانية في نهاية كل كورس.",
     // course names arabic
     courseHtml: "HTML",
     courseCss: "CSS",
-    courseJavascript: "جافاسكربت",
-    courseReact: "ريآكت",
+    courseJavascript: "javaScript",
+    courseReact: "React",
     courseBootstrapTailwind: "Bootstrap & Tailwind CSS",
-    courseUiUx: "تصميم واجهة وتجربة المستخدم",
-    courseGraphic: "تصميم جرافيك",
+    courseUiUx: "UI/UX",
+    courseGraphic: "Graphic Design",
     courseSql: "SQL",
     courseNode: "Node.js",
     // topics arabic
@@ -253,6 +302,55 @@ const translations = {
     nodeTopic6: "المصادقة (JWT)",
     nodeTopic7: "الاتصال بقاعدة البيانات",
     nodeTopic8: "مشروع الواجهة الخلفية",
+
+    pfTopic1: "مقدمة في البرمجة والتفكير المنطقي",
+    pfTopic2: "المتغيرات وأنواع البيانات",
+    pfTopic3: "الجمل الشرطية (if / else)",
+    pfTopic4: "الحلقات التكرارية (for / while)",
+    pfTopic5: "الدوال وإعادة استخدام الكود",
+    pfTopic6: "المصفوفات والقوائم",
+    pfTopic7: "حل المشكلات وأساسيات الخوارزميات",
+    pfTopic8: "مشروع برمجي صغير",
+
+    dsTopic1: "مقدمة في هياكل البيانات",
+    dsTopic2: "المصفوفات ومفهوم تعقيد الخوارزميات",
+    dsTopic3: "المكدسات والطوابير (Stack & Queue)",
+    dsTopic4: "القوائم المرتبطة (Linked Lists)",
+    dsTopic5: "الأشجار الثنائية (Binary Trees)",
+    dsTopic6: "جداول التجزئة (Hash Tables)",
+    dsTopic7: "خوارزميات البحث والترتيب",
+    dsTopic8: "حل المشكلات باستخدام هياكل البيانات",
+
+    seTopic1: "مقدمة في هندسة البرمجيات",
+    seTopic2: "دورة حياة تطوير البرمجيات (SDLC)",
+    seTopic3: "منهجيات Agile و Scrum",
+    seTopic4: "تحليل متطلبات النظام",
+    seTopic5: "أساسيات تصميم الأنظمة",
+    seTopic6: "إدارة الإصدارات باستخدام Git",
+    seTopic7: "العمل الجماعي وإدارة المشاريع",
+    seTopic8: "بناء مشروع برمجي متكامل",
+
+    daTopic1: "مقدمة في تحليل البيانات",
+    daTopic2: "أنواع البيانات وطرق جمعها",
+    daTopic3: "تنظيف البيانات وتجهيزها للتحليل",
+    daTopic4: "أساسيات عرض البيانات (Data Visualization)",
+    daTopic5: "استخدام Excel أو Python في التحليل",
+    daTopic6: "التحليل الاستكشافي للبيانات",
+    daTopic7: "تفسير البيانات واتخاذ القرارات",
+    daTopic8: "مشروع صغير في تحليل البيانات",
+
+    csTopic1: "مقدمة في الأمن السيبراني",
+    csTopic2: "أنواع الهجمات الإلكترونية",
+    csTopic3: "أساسيات أمن الشبكات",
+    csTopic4: "التشفير وحماية البيانات",
+    csTopic5: "أساسيات الاختراق الأخلاقي",
+    csTopic6: "أمن تطبيقات الويب",
+    csTopic7: "أدوات وممارسات الحماية",
+    csTopic8: "دراسة حالة في الأمن السيبراني",
+
+
+    privateSessionTitle: "متاح سيشنات خاصة",
+    privateSessionDesc: "يمكن للطلاب حجز سيشنات خاصة لأي موضوع خارج الكورسات الحالية، سواء للمساعدة في المشاريع الجامعية أو شرح موضوعات محددة في البرمجة أو مجالات التكنولوجيا."
   },
 };
 
