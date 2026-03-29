@@ -15,7 +15,8 @@ const Footer = () => {
     <footer className="bg-gray-50 py-16  border-t border-orange-500">
       <div className="max-w-screen-md mx-auto px-6 flex flex-col items-center text-center space-y-6">
         {/* Logo */}
-        <h2>
+        <h2 dir="ltr">
+          <span className="text-orange-500 font-bold text-3xl">{"</>"}</span>
           <span className="text-orange-500 font-bold text-3xl">EM</span>
           <span className="font-bold text-2xl">novation</span>
         </h2>
