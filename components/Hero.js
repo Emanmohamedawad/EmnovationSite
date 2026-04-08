@@ -67,7 +67,7 @@ const Hero = ({
   </ScrollAnimationWrapper>
 
   {/* Stats Section */}
-  <div className="relative w-full flex mt-12">
+  {/* <div className="relative w-full flex mt-12">
     <ScrollAnimationWrapper className="rounded-lg w-full grid grid-cols-1 sm:grid-cols-3 gap-6 py-4 bg-white-500 z-10">
       {listUser.map((listUsers, index) => (
         <motion.div
@@ -91,7 +91,7 @@ const Hero = ({
       className="absolute bg-black-600 opacity-5 w-11/12 rounded-lg h-64 sm:h-48 top-0 mt-8 mx-auto left-0 right-0"
       style={{ filter: "blur(114px)" }}
     ></div>
-  </div>
+  </div> */}
 </div>
   );
 };

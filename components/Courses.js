@@ -278,10 +278,32 @@ const Courses = () => {
 
   return (
     <div
-      className="bg-gradient-to-b from-white-300 to-white-500 w-full pt-16"
+      className="bg-gradient-to-b from-white-300 to-white-500 w-full "
       id="Courses"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      {/* section privte session */}
+      <div className="py-6 bg-orange-500 text-white-500 text-center container  ">
+        <span className="text-lg font-semibold block">
+          {t("privateSessionTitle")}
+        </span>
+
+        <span className="mt-2 text-sm text-center block">
+          {t("privateSessionDesc")}
+        </span>
+        <a
+          href={`https://wa.me/201153035834?text=${encodeURIComponent(
+            `Hello Emnovation`,
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="my-6 font-semibold bg-transparnt border-white-500 border rounded-[10px] text-white-500 hover:text-orange-500 hover:bg-white-500 px-6 py-1">
+            {t("contactWhatsapp")}
+          </button>
+        </a>
+      </div>
+      {/* Courses Section */}
+      <div className="max-w-7xl mx-auto px-6 my-6">
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
@@ -403,28 +425,6 @@ const Courses = () => {
           </div>
         </div>
       )}
-
-      {/* section privte session */}
-      <div className="py-6 bg-orange-500 text-white-500 text-center container mt-10 ">
-        <span className="text-lg font-semibold block">
-          {t("privateSessionTitle")}
-        </span>
-
-        <span className="mt-2 text-sm text-center block">
-          {t("privateSessionDesc")}
-        </span>
-        <a
-          href={`https://wa.me/201153035834?text=${encodeURIComponent(
-            `Hello Emnovation`,
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="my-6 font-semibold bg-transparnt border-white-500 border rounded-[10px] text-white-500 hover:text-orange-500 hover:bg-white-500 px-6 py-1">
-            {t("contactWhatsapp")}
-          </button>
-        </a>
-      </div>
     </div>
   );
 };
