@@ -281,8 +281,9 @@ const Courses = () => {
       className="bg-gradient-to-b from-white-300 to-white-500 w-full "
       id="Courses"
     >
+
       {/* section privte session */}
-      <div className="py-6 bg-orange-500 text-white-500 text-center container  ">
+      <div className="py-6 bg-orange-500 text-white-500 text-center">
         <span className="text-lg font-semibold block">
           {t("privateSessionTitle")}
         </span>
@@ -381,11 +382,11 @@ const Courses = () => {
 
             {/* Course Info */}
             <div className="mb-4 text-sm text-gray-500">
-              <p>
+              {/* <p>
                 {t("durationLabel")} : {selectedCourse.sessions}{" "}
                 {t("weeksLabel")}
-              </p>
-              <p>
+              </p> */}
+              {/* <p>
                 {t("pricePerSessionLabel")} : {selectedCourse.pricePerSession}{" "}
                 {selectedCourse.currency}
               </p>
@@ -393,7 +394,7 @@ const Courses = () => {
                 {t("totalLabel")} :{" "}
                 {selectedCourse.pricePerSession * selectedCourse.sessions}{" "}
                 {selectedCourse.currency}
-              </p>
+              </p> */}
             </div>
 
             {/* Topics */}

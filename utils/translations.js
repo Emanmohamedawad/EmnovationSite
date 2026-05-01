@@ -7,9 +7,8 @@ const translations = {
     testimonials: "Testimonials",
     startLearning: "Start Learning Today",
     heroTitle:
-      "Start Your Programming Career with Structured Roadmaps and Live Mentorship",
-    heroDescription:
-      "Join Emnovation Academy and learn modern programming skills through structured roadmaps, live sessions on Google Meet, and direct mentorship from industry experts. Build real projects and grow your career step by step.",
+      "Emnovation is Your Platform and First Step into the World of Programming",
+    heroDescription:"Start your programming journey with structured learning paths designed for all academic levels. We help students and institutions understand programming from basics to advanced concepts through simplified explanations, practical applications, and real-world projects.",
     switchToAr: "عربى",
     switchToEn: "EN",
 
@@ -175,7 +174,16 @@ const translations = {
 
 
     privateSessionTitle: "Private Sessions Available",
-    privateSessionDesc: "Students can book special sessions for any topic outside the listed courses, including help with university projects, programming challenges, or specific technology topics."
+    privateSessionDesc: "Students can book special sessions for any topic outside the listed courses, including help with university projects, programming challenges, or specific technology topics.",
+
+    schoolProgrammingTitle: "High School Programming Support",
+    schoolProgrammingDesc: "Simplified explanation, practical coding, and exam preparation for Egypt's new programming curriculum",
+  featureSimplified: "Simplified Learning",
+  featurePractical: "Practical Approach",
+  featureExams: "Exam Preparation",
+  featureAllGrades: "All Grades Coverage",
+  featureCurriculumExplanation: "Curriculum Explanation for All Grades",
+    startNow: "Start Now"
   },
   ar: {
     about: "من نحن",
@@ -183,9 +191,8 @@ const translations = {
     courses: "الدورات",
     testimonials: "آراء الطلاب",
     startLearning: "ابدأ التعلم اليوم",
-    heroTitle: "ابدأ مسيرتك في البرمجة بخطط منظمة وتوجيه مباشر",
-    heroDescription:
-      "انضم إلى أكاديمية إم نوفايشن وتعلم مهارات البرمجة الحديثة عبر خطط منظمة وجلسات مباشرة على Google Meet وتوجيه مباشر من خبراء الصناعة. أنشئ مشاريع واقعية وطور مسارك خطوة بخطوة.",
+    heroTitle: "أمنوفيشن هي منصتك وخطوتك الأولى في عالم البرمجة",
+    heroDescription:"ابدأ رحلتك في تعلم البرمجة من خلال مسارات تعليمية منظمة تناسب جميع المراحل الدراسية. نساعد الطلاب والمؤسسات على فهم البرمجة من الأساسيات حتى المستويات المتقدمة بأسلوب مبسط وتطبيقي يعتمد على المشاريع الواقعية.",
     switchToAr: "عربى",
     switchToEn: "EN",
 
@@ -350,7 +357,16 @@ const translations = {
 
 
     privateSessionTitle: "متاح سيشنات خاصة",
-    privateSessionDesc: "يمكن للطلاب حجز سيشنات خاصة لأي موضوع خارج الكورسات الحالية، سواء للمساعدة في المشاريع الجامعية أو شرح موضوعات محددة في البرمجة أو مجالات التكنولوجيا."
+    privateSessionDesc: "يمكن للطلاب حجز سيشنات خاصة لأي موضوع خارج الكورسات الحالية، سواء للمساعدة في المشاريع الجامعية أو شرح موضوعات محددة في البرمجة أو مجالات التكنولوجيا.",
+
+      schoolProgrammingTitle: "دعم مناهج البرمجة للمرحلة الثانوية",
+    schoolProgrammingDesc: "شرح مبسط + تطبيق عملي + حل امتحانات لمناهج البرمجة الجديدة في مصر",
+  featureSimplified: "شرح مبسط",
+  featurePractical: "تعلم عملي",
+  featureExams: "تجهيز للامتحانات",
+  featureAllGrades: "تغطية كل الصفوف",
+  featureCurriculumExplanation: "شرح مناهج كل الصفوف",
+    startNow: "ابدأ الآن"
   },
 };
 

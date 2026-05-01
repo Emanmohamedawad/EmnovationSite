@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
 import ButtonOutline from "../misc/ButtonOutline.";
 import LogoVPN from "../../public/assets/Logo.svg";
+import LogoEm from "../../public/assets/logoem.png";
+
 import { useLanguage } from "../../utils/LanguageContext";
 
 const Header = () => {
@@ -28,10 +31,16 @@ const Header = () => {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className={`col-start-1 col-end-2 flex items-center ${locale === "ar" ? "justify-end" : "justify-start"}`} dir="ltr">
-            <span className="text-orange-500 font-bold text-3xl">{"</>"}</span>
+            {/* <span className="text-orange-500 font-bold text-3xl">{"</>"}</span>
           <span className="text-orange-500 font-bold text-3xl">EM</span>
 
-            <span className="font-bold">novation</span>
+            <span className="font-bold">novation</span> */}
+            <Image              src={LogoEm}
+              alt="EMnovation Logo"
+              width={150}
+              height={50}
+              className="object-contain"
+            />
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
             <LinkScroll

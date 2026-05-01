@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link as LinkScroll } from "react-scroll";
+import LogoEm from "../../public/assets/logoem.png";
+import Image from "next/image";
 import { useLanguage } from "../../utils/LanguageContext";
 
 const Footer = () => {
@@ -16,9 +18,13 @@ const Footer = () => {
       <div className="max-w-screen-md mx-auto px-6 flex flex-col items-center text-center space-y-6">
         {/* Logo */}
         <h2 dir="ltr">
-          <span className="text-orange-500 font-bold text-3xl">{"</>"}</span>
-          <span className="text-orange-500 font-bold text-3xl">EM</span>
-          <span className="font-bold text-2xl">novation</span>
+          <Image
+            src={LogoEm}
+            alt="EMnovation Logo"
+            width={150}
+            height={50}
+            className="object-contain"
+          />
         </h2>
 
         {/* Description */}
