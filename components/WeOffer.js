@@ -129,25 +129,25 @@ const Feature = () => {
           {/* Features */}
           <div className="flex flex-wrap gap-2 mt-5">
             <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
-            style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+           style={{backgroundColor:"#F53855", color:"#fff"}}
             >
               {t("featureCurriculumExplanation")}
             </span>
 
             <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
-              style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+              style={{backgroundColor:"#F53855", color:"#fff"}}
             >
               {t("featureSimplified")}
             </span>
 
             <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
-              style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+              style={{backgroundColor:"#F53855", color:"#fff"}}
             >
               {t("featurePractical")}
             </span>
 
             <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
-              style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+              style={{backgroundColor:"#F53855", color:"#fff"}}
             >
               {t("featureExams")}
             </span>
@@ -163,7 +163,7 @@ const Feature = () => {
             className="text-center"
           >
             <button className="mt-6 bg-[#F53855] text-[#fff] font-medium rounded-lg px-6 py-2 hover:bg-[#d92f4c] transition shadow-md"
-            style={{backgroundColor:"#F53855",hover:{backgroundColor:"#d92f4c"}}}
+            style={{backgroundColor:"#F53855",hover:{backgroundColor:"#d92f4c" , color:"#fff"}}}
             >
               {t("startNow")}
             </button>
