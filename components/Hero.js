@@ -30,7 +30,7 @@ const Hero = ({
 
   const { t } = useLanguage();
   return (
-<div className="max-w-screen-xl mt-24 px-4 sm:px-8 xl:px-16 mx-auto" id="about">
+<div className="max-w-screen-xl mt-28 px-4 sm:px-8 xl:px-16 mx-auto" id="about">
   <ScrollAnimationWrapper>
     <motion.div
       className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 items-center"

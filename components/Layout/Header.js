@@ -43,7 +43,7 @@ const Header = () => {
           scrollActive ? "shadow-md py-2" : "py-4"
         }`}
       >
-        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
+        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col sm:py-4">
 
           {/* LOGO */}
           <div
