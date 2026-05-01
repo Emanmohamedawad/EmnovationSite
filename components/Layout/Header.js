@@ -125,7 +125,7 @@ const Header = () => {
           </li>
 
           <li onClick={() => scrollToSection("Courses")} className="flex flex-col items-center text-xs cursor-pointer">
-            <span>💰</span>
+            <span>📚</span>
             {t("courses")}
           </li>
 
