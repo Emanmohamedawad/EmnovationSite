@@ -128,19 +128,27 @@ const Feature = () => {
 
           {/* Features */}
           <div className="flex flex-wrap gap-2 mt-5">
-            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium">
+            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
+            style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+            >
               {t("featureCurriculumExplanation")}
             </span>
 
-            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium">
+            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
+              style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+            >
               {t("featureSimplified")}
             </span>
 
-            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium">
+            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
+              style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+            >
               {t("featurePractical")}
             </span>
 
-            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium">
+            <span className="bg-[#F53855]/10 text-[#F53855] px-3 py-1 rounded-full text-xs font-medium"
+              style={{backgroundColor:"#F53855", opacity:0.1, color:"#F53855"}}
+            >
               {t("featureExams")}
             </span>
           </div>
@@ -154,7 +162,9 @@ const Feature = () => {
             rel="noopener noreferrer"
             className="text-center"
           >
-            <button className="mt-6 bg-[#F53855] text-[#fff] font-medium rounded-lg px-6 py-2 hover:bg-[#d92f4c] transition shadow-md">
+            <button className="mt-6 bg-[#F53855] text-[#fff] font-medium rounded-lg px-6 py-2 hover:bg-[#d92f4c] transition shadow-md"
+            style={{backgroundColor:"#F53855",hover:{backgroundColor:"#d92f4c"}}}
+            >
               {t("startNow")}
             </button>
           </a>
