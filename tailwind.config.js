@@ -60,8 +60,9 @@ module.exports = {
         white: "#ffffff",
         // Dark theme colors using the same palette
         dark: {
-          bg: "#0D1A63", // Navy Blue background
-          surface: "#1a1a2e", // Slightly lighter surface
+          // bg: "#0D1A63", // Navy Blue background
+          bg: "#1a1a2e", // Slightly lighter than pure navy for better contrast
+          surface: "#132440", // Slightly lighter surface
           text: "#ffffff", // White text
           textSecondary: "#a3a3a3", // Neutral gray
           border: "#404040", // Neutral border
