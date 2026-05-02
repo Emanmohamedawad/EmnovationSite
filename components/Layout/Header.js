@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "../../utils/LanguageContext";
+import { useTheme } from "../../utils/ThemeContext";
 import LogoEm from "../../public/assets/logoem.png";
+import LogoWhite from "../../public/assets/logowhite.png";
 
 const Header = () => {
   const { locale, setLocale, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
 
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
@@ -49,7 +52,7 @@ const Header = () => {
     <>
       {/* HEADER */}
       <header
-        className={`fixed top-0 w-full z-30 bg-white-500 transition-all ${
+        className={`fixed top-0 w-full z-30 bg-white dark:bg-dark-bg transition-all ${
           scrollActive ? "shadow-md py-2" : "py-4"
         }`}
       >
@@ -61,7 +64,7 @@ const Header = () => {
             }`}
           >
             <Image
-              src={LogoEm}
+              src={theme === "dark" ? LogoWhite : LogoEm}
               alt="EMnovation Logo"
               width={150}
               height={50}
@@ -70,13 +73,13 @@ const Header = () => {
           </div>
 
           {/* DESKTOP MENU */}
-          <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500 items-center gap-2">
+          <ul className="hidden lg:flex col-start-4 col-end-8 text-neutral-700 dark:text-dark-text items-center gap-2">
             <li
               onClick={() => scrollToSection("about")}
               className={`px-4 py-2 cursor-pointer transition ${
                 activeLink === "about"
-                  ? "text-orange-500"
-                  : "hover:text-orange-500"
+                  ? "text-accent-500"
+                  : "hover:text-accent-500"
               }`}
             >
               {t("about")}
@@ -86,8 +89,8 @@ const Header = () => {
               onClick={() => scrollToSection("we-offer")}
               className={`px-4 py-2 cursor-pointer transition ${
                 activeLink === "we-offer"
-                  ? "text-orange-500"
-                  : "hover:text-orange-500"
+                  ? "text-accent-500"
+                  : "hover:text-accent-500"
               }`}
             >
               {t("whatWeOffer")}
@@ -97,19 +100,30 @@ const Header = () => {
               onClick={() => scrollToSection("Courses")}
               className={`px-4 py-2 cursor-pointer transition ${
                 activeLink === "Courses"
-                  ? "text-orange-500"
-                  : "hover:text-orange-500"
+                  ? "text-accent-500"
+                  : "hover:text-accent-500"
               }`}
             >
               {t("courses")}
             </li>
           </ul>
 
-          {/* LANGUAGE SWITCH */}
-          <div className="col-start-8 col-end-9 flex items-center justify-end">
+          {/* LANGUAGE SWITCH & THEME TOGGLE */}
+          <div className="col-start-8 col-end-9 flex items-center justify-end gap-2">
+            <button
+              onClick={toggleTheme}
+              className="text-sm border border-accent-500 px-3 py-1 rounded text-accent-500 hover:bg-accent-500 hover:text-white dark:hover:bg-accent-500 dark:hover:text-white transition"
+              title={
+                theme === "light"
+                  ? "Switch to Dark Mode"
+                  : "Switch to Light Mode"
+              }
+            >
+              {theme === "light" ? "🌙" : "☀️"}
+            </button>
             <button
               onClick={toggle}
-              className="text-sm border border-orange-500 px-3 py-1 rounded text-orange-500 hover:bg-orange-500 hover:text-white transition"
+              className="text-sm border border-accent-500 px-3 py-1 rounded text-accent-500 hover:bg-accent-500 hover:text-white dark:hover:bg-accent-500 dark:hover:text-white transition"
             >
               {locale === "en" ? t("switchToAr") : t("switchToEn")}
             </button>
@@ -118,8 +132,8 @@ const Header = () => {
       </header>
 
       {/* MOBILE NAV */}
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 shadow-t bg-white-500">
-        <ul className="flex justify-between items-center px-4 py-2 text-black-500">
+      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 shadow-t bg-white dark:bg-dark-bg">
+        <ul className="flex justify-between items-center px-4 py-2 text-neutral-700 dark:text-dark-text">
           <li
             onClick={() => scrollToSection("about")}
             className="flex flex-col items-center text-xs cursor-pointer"

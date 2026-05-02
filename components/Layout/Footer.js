@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import LogoEm from "../../public/assets/logoem.png";
+import LogoWhite from "../../public/assets/logowhite.png";
 import { useLanguage } from "../../utils/LanguageContext";
+import { useTheme } from "../../utils/ThemeContext";
 
 const Footer = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   // ✅ FAST smooth scroll with fixed-header offset
   const scrollToSection = (id) => {
@@ -28,37 +31,39 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white-500 py-16 border-t  border-orange-500">
+    <footer className="bg-white dark:bg-dark-bg py-16 border-t border-accent-500">
       <div className="max-w-screen-md mx-auto px-6 flex flex-col items-center text-center space-y-6">
         {/* Logo */}
         <Image
-          src={LogoEm}
+          src={theme === "dark" ? LogoWhite : LogoEm}
           alt="EMnovation Logo"
           width={150}
           height={50}
           className="object-contain"
         />
         {/* Description */}
-        <p className="text-black-500 max-w-md">{t("heroDescription")}</p>
+        <p className="text-neutral-700 dark:text-dark-text max-w-md">
+          {t("heroDescription")}
+        </p>
         {/* NAVIGATION (NO react-scroll) */}
-        <div className="hidden md:flex gap-8 text-gray-600">
+        <div className="hidden md:flex gap-8 text-neutral-600 dark:text-dark-textSecondary">
           <button
             onClick={() => scrollToSection("about")}
-            className="hover:text-orange-500 transition"
+            className="hover:text-accent-500 transition"
           >
             {t("about")}
           </button>
 
           <button
             onClick={() => scrollToSection("we-offer")}
-            className="hover:text-orange-500 transition"
+            className="hover:text-accent-500 transition"
           >
             {t("whatWeOffer")}
           </button>
 
           <button
             onClick={() => scrollToSection("Courses")}
-            className="hover:text-orange-500 transition"
+            className="hover:text-accent-500 transition"
           >
             {t("courses")}
           </button>
@@ -69,7 +74,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/emanmohameda2799/"
             target="_blank"
-            className="text-orange-500 hover:text-black-600 transition "
+            className="text-accent-500 hover:text-primary-600 dark:hover:text-dark-text transition "
           >
             {" "}
             <svg
@@ -86,7 +91,7 @@ const Footer = () => {
             href="https://wa.me/201153035834?text=Hello%20EMnovation!%20I%20want%20to%20know%20more%20about%20your%20programming%20courses"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-orange-500 hover:text-black-600 transition"
+            className="text-accent-500 hover:text-primary-600 dark:hover:text-dark-text transition"
           >
             {" "}
             <svg
@@ -101,7 +106,7 @@ const Footer = () => {
           </a>{" "}
         </div>
         {/* Copyright */}
-        <p className="text-gray-400 text-sm pt-4">
+        <p className="text-neutral-400 dark:text-dark-textSecondary text-sm pt-4">
           © {new Date().getFullYear()} Emnovation Academy
         </p>
       </div>

@@ -277,13 +277,9 @@ const Courses = () => {
   ];
 
   return (
-    <div
-      className="bg-white-200 w-full "
-      id="Courses"
-    >
-
+    <div className="bg-neutral-50 dark:bg-dark-bg w-full " id="Courses">
       {/* section privte session */}
-      <div className="py-6 bg-orange-500 text-white-500 text-center">
+      <div className="py-6 bg-accent-500 text-white text-center">
         <span className="text-lg font-semibold block">
           {t("privateSessionTitle")}
         </span>
@@ -298,7 +294,7 @@ const Courses = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="my-6 font-semibold bg-transparnt border-white-500 border rounded-[10px] text-white-500 hover:text-orange-500 hover:bg-white-500 px-6 py-1">
+          <button className="my-6 font-semibold bg-white border-white border rounded-[10px] text-accent-500 hover:text-white hover:bg-accent-500 px-6 py-1">
             {t("contactWhatsapp")}
           </button>
         </a>
@@ -307,11 +303,13 @@ const Courses = () => {
       <div className="max-w-7xl mx-auto px-6 my-6">
         {/* Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-dark-text">
             {t("coursesSectionTitle")}
           </h2>
 
-          <p className="text-gray-500 mt-4">{t("coursesSectionDescription")}</p>
+          <p className="text-neutral-600 dark:text-dark-textSecondary mt-4">
+            {t("coursesSectionDescription")}
+          </p>
         </div>
 
         {/* Courses Grid */}
@@ -319,7 +317,7 @@ const Courses = () => {
           {courses.map((course) => (
             <div
               key={course.id}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 hover:shadow-xl transition duration-300"
+              className="bg-white dark:bg-dark-surface rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 hover:shadow-xl transition duration-300"
             >
               <Image
                 src={course.image}
@@ -335,18 +333,17 @@ const Courses = () => {
               />
 
               <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">{t(course.titleKey)}</h3>
+                <h3 className="text-lg font-bold text-primary-600 dark:text-dark-text">
+                  {t(course.titleKey)}
+                </h3>
 
-                <p className="text-gray-500 text-sm mt-1">
+                <p className="text-neutral-600 dark:text-dark-textSecondary text-sm mt-1">
                   {t("durationLabel")} : {course.sessions} {t("weeksLabel")}
                 </p>
 
                 <button
                   onClick={() => setSelectedCourse(course)}
-                  className="mt-4 bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-500 transition"
-                  style={{
-                    color: "#fff",
-                  }}
+                  className="mt-4 bg-accent-500 px-4 py-2 rounded-lg hover:bg-accent-600 transition text-white"
                 >
                   {t("viewDetails")}
                 </button>
@@ -363,25 +360,24 @@ const Courses = () => {
           onClick={() => setSelectedCourse(null)}
         >
           <div
-            className="bg-white m-5 rounded-2xl p-8 w-full max-w-md shadow-2xl border border-gray-200 relative"
+            className="bg-white dark:bg-dark-surface m-5 rounded-2xl p-8 w-full max-w-md shadow-2xl border border-neutral-200 dark:border-dark-border relative"
             onClick={(e) => e.stopPropagation()}
-            style={{ backgroundColor: "#fff" }}
           >
             {/* Close */}
             <button
               onClick={() => setSelectedCourse(null)}
-              className="absolute right-4 top-4 text-gray-400 hover:text-gray-700 text-xl"
+              className="absolute right-4 top-4 text-neutral-400 dark:text-dark-textSecondary hover:text-neutral-700 dark:hover:text-dark-text text-xl"
             >
               ✕
             </button>
 
             {/* Title */}
-            <h3 className="text-2xl font-bold mb-4 text-orange-500">
+            <h3 className="text-2xl font-bold mb-4 text-accent-500 dark:text-accent-500">
               {t(selectedCourse.titleKey)}
             </h3>
 
             {/* Course Info */}
-            <div className="mb-4 text-sm text-gray-500">
+            <div className="mb-4 text-sm text-neutral-600 dark:text-dark-textSecondary">
               {/* <p>
                 {t("durationLabel")} : {selectedCourse.sessions}{" "}
                 {t("weeksLabel")}
@@ -398,7 +394,7 @@ const Courses = () => {
             </div>
 
             {/* Topics */}
-            <ul className="space-y-2 mb-6 text-gray-600 max-h-48 overflow-y-auto pr-2">
+            <ul className="space-y-2 mb-6 text-neutral-700 dark:text-dark-text max-h-48 overflow-y-auto pr-2">
               {selectedCourse.topicsKeys.map((key, i) => (
                 <li key={i} className="flex gap-2">
                   <span className="text-orange-500">•</span>
@@ -415,12 +411,11 @@ const Courses = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center bg-green-500 text-white px-4 py-3 rounded-lg hover:bg-green-600 transition"
-              style={{ color: "#fff" }}
             >
               {t("contactWhatsapp")}
             </a>
             {/* Note */}
-            <p className="text-sm text-gray-700 mt-4 text-center bg-gray-50 p-3 rounded-lg border border-gray-100">
+            <p className="text-sm text-neutral-700 dark:text-dark-text mt-4 text-center bg-neutral-50 dark:bg-dark-surface p-3 rounded-lg border border-neutral-100 dark:border-dark-border">
               {t("firstSessionFreeNote")}
             </p>
           </div>

@@ -1,11 +1,14 @@
 import "../styles/tailwind.css";
 import "../styles/slick.css";
 import { LanguageProvider } from "../utils/LanguageContext";
+import { ThemeProvider } from "../utils/ThemeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <LanguageProvider>
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </LanguageProvider>
   );
 }

@@ -30,44 +30,48 @@ const Hero = ({
 
   const { t } = useLanguage();
   return (
-<div className="max-w-screen-xl mt-28 px-4 sm:px-8 xl:px-16 mx-auto" id="about">
-  <ScrollAnimationWrapper>
-    <motion.div
-      className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 items-center"
-      variants={scrollAnimation}
+    <div
+      className="max-w-screen-xl mt-28 px-4 sm:px-8 xl:px-16 mx-auto"
+      id="about"
     >
-      {/* Left Text */}
-      <div className="flex flex-col justify-center">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-snug">
-          {t("heroTitle")}
-        </h1>
-        <p className="text-black-500 mt-4 mb-6">{t("heroDescription")}</p>
-        <div className="text-center">
-        <a href="#Courses">
-          <ButtonPrimary>{t("startLearning")}</ButtonPrimary>
-        </a>
-        </div>
+      <ScrollAnimationWrapper>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 items-center"
+          variants={scrollAnimation}
+        >
+          {/* Left Text */}
+          <div className="flex flex-col justify-center">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-primary-600 dark:text-dark-text leading-snug">
+              {t("heroTitle")}
+            </h1>
+            <p className="text-neutral-700 dark:text-dark-text mt-4 mb-6">
+              {t("heroDescription")}
+            </p>
+            <div className="text-center">
+              <a href="#Courses">
+                <ButtonPrimary>{t("startLearning")}</ButtonPrimary>
+              </a>
+            </div>
+          </div>
 
-      </div>
-
-      {/* Right Image */}
-      <div className="flex justify-center sm:justify-end w-full">
-        <motion.div className="w-full max-w-md" variants={scrollAnimation}>
-          <Image
-            src="/assets/Illustration1.png"
-            alt="VPN Illustration"
-            width={612}
-            height={483}
-            layout="responsive"
-            className="object-contain"
-          />
+          {/* Right Image */}
+          <div className="flex justify-center sm:justify-end w-full">
+            <motion.div className="w-full max-w-md" variants={scrollAnimation}>
+              <Image
+                src="/assets/Illustration1.png"
+                alt="VPN Illustration"
+                width={612}
+                height={483}
+                layout="responsive"
+                className="object-contain"
+              />
+            </motion.div>
+          </div>
         </motion.div>
-      </div>
-    </motion.div>
-  </ScrollAnimationWrapper>
+      </ScrollAnimationWrapper>
 
-  {/* Stats Section */}
-  {/* <div className="relative w-full flex mt-12">
+      {/* Stats Section */}
+      {/* <div className="relative w-full flex mt-12">
     <ScrollAnimationWrapper className="rounded-lg w-full grid grid-cols-1 sm:grid-cols-3 gap-6 py-4 bg-white-500 z-10">
       {listUser.map((listUsers, index) => (
         <motion.div
@@ -92,7 +96,7 @@ const Hero = ({
       style={{ filter: "blur(114px)" }}
     ></div>
   </div> */}
-</div>
+    </div>
   );
 };
 
