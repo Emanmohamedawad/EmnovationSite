@@ -343,7 +343,7 @@ const Courses = () => {
 
                 <button
                   onClick={() => setSelectedCourse(course)}
-                  className="mt-4 bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-600 transition"
+                  className="mt-4 bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-500 transition"
                   style={{
                     color: "#fff",
                   }}

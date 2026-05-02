@@ -6,14 +6,24 @@ import { useLanguage } from "../../utils/LanguageContext";
 const Footer = () => {
   const { t } = useLanguage();
 
-  // ✅ FAST smooth scroll (no library)
+  // ✅ FAST smooth scroll with fixed-header offset
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
 
-    el.scrollIntoView({
+    const header = document.querySelector("header");
+    const headerHeight = header ? header.offsetHeight : 0;
+    const offset = 12;
+
+    const top =
+      el.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      offset;
+
+    window.scrollTo({
+      top,
       behavior: "smooth",
-      block: "start",
     });
   };
 

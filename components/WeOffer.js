@@ -163,7 +163,7 @@ const Feature = () => {
             className="text-center"
           >
             <button className="mt-6 bg-[#F53855] text-[#fff] font-medium rounded-lg px-6 py-2 hover:bg-[#d92f4c] transition shadow-md"
-            style={{backgroundColor:"#F53855",hover:{backgroundColor:"#d92f4c" , color:"#fff"}}}
+            style={{backgroundColor:"#F53855",hover:{backgroundColor:"#d92f4c" , color:"#fff", color:"#fff"}}}
             >
               {t("startNow")}
             </button>

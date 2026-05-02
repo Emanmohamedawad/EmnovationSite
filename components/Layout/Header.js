@@ -22,14 +22,24 @@ const Header = () => {
     setLocale(locale === "en" ? "ar" : "en");
   };
 
-  // ✅ Smooth scroll helper (FAST + NO LAG)
+  // ✅ Smooth scroll helper with fixed-header offset
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
 
-    el.scrollIntoView({
+    const header = document.querySelector("header");
+    const headerHeight = header ? header.offsetHeight : 0;
+    const offset = 12; // small extra spacing below header
+
+    const top =
+      el.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      offset;
+
+    window.scrollTo({
+      top,
       behavior: "smooth",
-      block: "start",
     });
 
     setActiveLink(id);
@@ -44,7 +54,6 @@ const Header = () => {
         }`}
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col sm:py-4">
-
           {/* LOGO */}
           <div
             className={`col-start-1 col-end-2 flex items-center ${
@@ -62,7 +71,6 @@ const Header = () => {
 
           {/* DESKTOP MENU */}
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500 items-center gap-2">
-
             <li
               onClick={() => scrollToSection("about")}
               className={`px-4 py-2 cursor-pointer transition ${
@@ -95,7 +103,6 @@ const Header = () => {
             >
               {t("courses")}
             </li>
-
           </ul>
 
           {/* LANGUAGE SWITCH */}
@@ -113,22 +120,29 @@ const Header = () => {
       {/* MOBILE NAV */}
       <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 shadow-t bg-white-500">
         <ul className="flex justify-between items-center px-4 py-2 text-black-500">
-
-          <li onClick={() => scrollToSection("about")} className="flex flex-col items-center text-xs cursor-pointer">
+          <li
+            onClick={() => scrollToSection("about")}
+            className="flex flex-col items-center text-xs cursor-pointer"
+          >
             <span>ℹ️</span>
             {t("about")}
           </li>
 
-          <li onClick={() => scrollToSection("we-offer")} className="flex flex-col items-center text-xs cursor-pointer">
+          <li
+            onClick={() => scrollToSection("we-offer")}
+            className="flex flex-col items-center text-xs cursor-pointer"
+          >
             <span>🌐</span>
             {t("whatWeOffer")}
           </li>
 
-          <li onClick={() => scrollToSection("Courses")} className="flex flex-col items-center text-xs cursor-pointer">
+          <li
+            onClick={() => scrollToSection("Courses")}
+            className="flex flex-col items-center text-xs cursor-pointer"
+          >
             <span>📚</span>
             {t("courses")}
           </li>
-
         </ul>
       </nav>
     </>
