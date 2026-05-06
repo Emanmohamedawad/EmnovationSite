@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "../../utils/LanguageContext";
 import { useTheme } from "../../utils/ThemeContext";
-import LogoEm from "../../public/assets/logoem.png";
-import LogoWhite from "../../public/assets/logowhite.png";
+import LogoEm from "../../public/assets/logoblue.png";
+import LogoWhite from "../../public/assets/logowhitenew.png";
 
 const Header = () => {
   const { locale, setLocale, t } = useLanguage();
