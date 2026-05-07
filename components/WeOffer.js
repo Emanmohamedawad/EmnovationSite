@@ -7,12 +7,13 @@ import { useLanguage } from "../utils/LanguageContext";
 
 // each string is a translation key
 const features = [
-  "structuredRoadmaps",
-  "liveSessions",
-  "learnTechnologies",
-  "realProjects",
   "guidance",
   "supportWhatsapp",
+  "structuredRoadmaps",
+  "liveSessions",
+  // "learnTechnologies",
+  "realProjects",
+
 ];
 
 const Feature = () => {

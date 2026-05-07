@@ -337,9 +337,9 @@ const Courses = () => {
                   {t(course.titleKey)}
                 </h3>
 
-                <p className="text-neutral-600 dark:text-dark-textSecondary text-sm mt-1">
+                {/* <p className="text-neutral-600 dark:text-dark-textSecondary text-sm mt-1">
                   {t("durationLabel")} : {course.sessions} {t("weeksLabel")}
-                </p>
+                </p> */}
 
                 <button
                   onClick={() => setSelectedCourse(course)}
