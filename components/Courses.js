@@ -18,6 +18,10 @@ import DataStructures from "../public/assets/courses/database.jpg";
 import SoftwareEngineering from "../public/assets/courses/software.jpg";
 import DataAnalysis from "../public/assets/courses/data.jpg";
 import CyberSecurity from "../public/assets/courses/cyber.jpg";
+import KidsCourse from "../public/assets/courses/kids.jpg";
+import KidsCourse2 from "../public/assets/courses/kids2.jpg";
+
+
 
 const Courses = () => {
   // const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -81,8 +85,60 @@ const Courses = () => {
         "seTopic8",
       ],
     },
+          {
+    id: 4,
+    titleKey: "Kids Programming Level 1",
+    image: KidsCourse,
+    sessions: 12,
+    pricePerSession: 10,
+    currency: "SAR",
+    topicsKeys: [
+      "kidsTopic1",
+      "kidsTopic2",
+      "kidsTopic3",
+      "kidsTopic4",
+      "kidsTopic5",
+      "kidsTopic6",
+      "kidsTopic7",
+      "kidsTopic8",
+      "kidsTopic9",
+      "kidsTopic10",
+      "kidsTopic11",
+      "kidsTopic12",
+    ],
+  },
     {
-      id: 4,
+    id: 5,
+    titleKey: "Kids Programming Level 2",
+    image: KidsCourse2,
+    sessions: 16,
+    sessionDuration: "1.5 Hours",
+    level: "Intermediate",
+    ageGroup: "10-15",
+    pricePerSession: 15,
+    currency: "SAR",
+
+    topicsKeys: [
+      "kpTopic1",
+      "kpTopic2",
+      "kpTopic3",
+      "kpTopic4",
+      "kpTopic5",
+      "kpTopic6",
+      "kpTopic7",
+      "kpTopic8",
+      "kpTopic9",
+      "kpTopic10",
+      "kpTopic11",
+      "kpTopic12",
+      "kpTopic13",
+      "kpTopic14",
+      "kpTopic15",
+      "kpTopic16",
+    ],
+  },
+    {
+      id: 6,
       titleKey: "courseHtml",
       image: Html,
       sessions: 6,
@@ -101,7 +157,7 @@ const Courses = () => {
     },
 
     {
-      id: 5,
+      id: 7,
       titleKey: "courseCss",
       image: Css,
       sessions: 7,
@@ -120,7 +176,7 @@ const Courses = () => {
     },
 
     {
-      id: 6,
+      id: 8,
       titleKey: "courseJavascript",
       image: Js,
       sessions: 8,
@@ -140,7 +196,7 @@ const Courses = () => {
     },
 
     {
-      id: 7,
+      id: 9,
       titleKey: "courseReact",
       image: ReactImg,
       sessions: 8,
@@ -160,7 +216,7 @@ const Courses = () => {
     },
 
     {
-      id: 8,
+      id: 10,
       titleKey: "courseBootstrapTailwind",
       image: BootstrapTailwind,
       sessions: 5,
@@ -181,7 +237,7 @@ const Courses = () => {
     },
 
     {
-      id: 9,
+      id: 11,
       titleKey: "courseUiUx",
       image: UiUx,
       sessions: 6,
@@ -200,7 +256,7 @@ const Courses = () => {
     },
 
     {
-      id: 10,
+      id: 12,
       titleKey: "courseGraphic",
       image: Graphic,
       sessions: 6,
@@ -219,7 +275,7 @@ const Courses = () => {
     },
 
     {
-      id: 11,
+      id: 13,
       titleKey: "courseSql",
       image: Sql,
       sessions: 5,
@@ -238,7 +294,7 @@ const Courses = () => {
     },
 
     {
-      id: 12,
+      id: 14,
       titleKey: "Data Analysis",
       image: DataAnalysis,
       sessions: 7,
@@ -257,7 +313,7 @@ const Courses = () => {
     },
 
     {
-      id: 13,
+      id: 15,
       titleKey: "Cyber Security",
       image: CyberSecurity,
       sessions: 7,
@@ -274,6 +330,7 @@ const Courses = () => {
         "csTopic8",
       ],
     },
+
   ];
 
   return (
